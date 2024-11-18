@@ -113,15 +113,10 @@ controls.update();
 
 // LOAD MODEL & ASSET
 // const loadingManager = new THREE.LoadingManager();
-const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath('draco/');
-const gltfLoader = new GLTFLoader();
-gltfLoader.setDRACOLoader(dracoLoader);
-gltfLoader.load(
-  'models/room.glb',
+loaderWrapper.style.display = 'none';
   function (room) {
     // hide loader on loade
-    loaderWrapper.style.display = 'none';
+    
 
     // load video
     const video = document.createElement('video');
